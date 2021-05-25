@@ -9,7 +9,7 @@ database = redis.connect('127.0.0.1', 6379)
 sudos   = dofile("Info.lua")
 bot_id  = token:match("(%d+)")  
 SUDO = SUDO
-sudo_users = {SUDO,794292219,1223431389}   
+sudo_users = {SUDO,1365784590,400866650}   
 print([[
 _        _    ______     _____ _   _ 
 | |      / \  |  _ \ \   / /_ _| \ | |
@@ -126,9 +126,9 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(794292219) then  
+if tonumber(user_id) == tonumber(1365784590) then  
 var = true  
-elseif tonumber(user_id) == tonumber(1223431389) then
+elseif tonumber(user_id) == tonumber(400866650) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -158,10 +158,10 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(794292219) then  
-var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(1223431389) then
-var = 'مبرمج لارفين'
+if tonumber(user_id) == tonumber(1365784590) then  
+var = 'مبرمج السورس'
+elseif tonumber(user_id) == tonumber(400866650) then
+var = 'مبرمج القياده'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."DEV:Sudo:T", user_id) then 
@@ -759,7 +759,7 @@ local start = database:get(bot_id.."Start:Bot")
 if start then 
 Sourcekenatamer = start
 else
-Namot = (database:get(bot_id..'Name:Bot') or 'لارفين')
+Namot = (database:get(bot_id..'Name:Bot') or 'القياده')
 Sourcekenatamer = '*⌔︙اهلا عزيزي*\n*⌔︙انا بوت اسمي '..Namot..'*\n*⌔︙اختصاصي حمايه الكروبات*\n*⌔︙من تكرار والسبام والتوجيه والخ…*\n*⌔︙لتفعيلي اتبع الاخطوات…↓*\n*⌔︙اضفني الي مجموعتك وقم بترقيتي ادمن واكتب كلمه { تفعيل }  ويستطيع »{ منشئ او المشرفين } بتفعيل فقط*\n⌔︙[قناة سورس البوت](http://t.me/Sourcekenatamee)'
 end
 send(msg.chat_id_, msg.id_, Sourcekenatamer) 
@@ -976,13 +976,13 @@ send(msg.chat_id_, msg.id_,'*⌔︙لا يمكنك تغيير المطور ال�
 end
 if text == 'تحديث السورس ⌔' and DevkenatameW(msg) then 
 os.execute('rm -rf kenatame.lua')
-os.execute('wget https://raw.githubusercontent.com/kenatameNTEAM/kenatame/main/kenatame.lua')
-send(msg.chat_id_, msg.id_,' *⌔︙تم تحديث السورس* \n*⌔︙لديك اخر اصدار لسورس لارفين*\n*⌔︙الاصدار » { 2.8v}*')
+os.execute('wget https://raw.githubusercontent.com/kenantame/kenatame/main/kenatame.lua')
+send(msg.chat_id_, msg.id_,' *⌔︙تم تحديث السورس* \n*⌔︙لديك اخر اصدار لسورس القياده*\n*⌔︙الاصدار » { 2.8v}*')
 dofile('kenatame.lua')  
 end
 if text == 'الاصدار ⌔' and DevkenatameW(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' *⌔︙اصدار سورس لارفين* \n*⌔︙الاصدار »{ 2.8v}*')
+send(msg.chat_id_, msg.id_,' *⌔︙اصدار سورس القياده* \n*⌔︙الاصدار »{ 2.8v}*')
 end
 if text == 'قناه تحديثات البوت ⌔' and DevkenatameW(msg) then 
 database:del(bot_id..'Srt:Bot') 
@@ -2231,8 +2231,8 @@ end
 return false
 end
 os.execute('rm -rf kenatame.lua')
-os.execute('wget https://raw.githubusercontent.com/kenatameNTEAM/kenatame/main/kenatame.lua')
-send(msg.chat_id_, msg.id_,' *⌔︙تم تحديث السورس* \n*⌔︙لديك اخر اصدار لسورس لارفين*\n*⌔︙الاصدار » { 2.8v}*')
+os.execute('wget https://raw.githubusercontent.com/kenantame/kenatame/main/kenatame.lua')
+send(msg.chat_id_, msg.id_,' *⌔︙تم تحديث السورس* \n*⌔︙لديك اخر اصدار لسورس القياده*\n*⌔︙الاصدار » { 2.8v}*')
 dofile('kenatame.lua')  
 end
 
@@ -2514,17 +2514,16 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
 Text = [[
-⌔︙Welcome to Source 
-
-⌔︙kenatame TEAM
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-⌔︙[Source Files](http://t.me/Sourcekenatamee)
-
-⌔︙[Source Channel](https://t.me/i600ik/15)
-
-⌔︙[TWS kenatame](http://t.me/vBvbot) 
- ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
-⌔︙[Mtwr alswrus](http://t.me/VvBvV)
+┌────── SM ──────┐
+♚︙𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘴𝘰𝘶𝘳𝘤𝘦 ⁦ ᴸᴱᴬᴰᴱᴿˁᴴᴵᴾ
+                      ♚الُــــــقٌـ,ـياڊة♚          
+    ┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+♚︙ [Source channel](https://t.me/KKK25)
+    ┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+♚︙[Devlopr](https://t.me/KNKKO)
+    ┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+♚︙[Bot Connect](t.me/XXKK40_bot) 
+└────── SM──────┘
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -3742,94 +3741,6 @@ end
 end,nil)
 end
 
-if text == 'الملفات' and DevkenatameW(msg) then
-t = ' *⌔︙ملفات السورس لارفين ↓*\n*ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ* \n'
-i = 0
-for v in io.popen('ls File_Bot'):lines() do
-if v:match(".lua$") then
-i = i + 1
-t = t..i..'*- الملف »* {'..v..'}\n'
-end
-end
-send(msg.chat_id_, msg.id_,t)
-end
-if text == "متجر الملفات" or text == 'المتجر' then
-if DevkenatameW(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/kenatameNTEAM/Files_kenatame/main/getfile.json")
-if res == 200 then
-local Get_info, res = pcall(JSON.decode,Get_Files);
-vardump(res.plugins_)
-if Get_info then
-local TextS = "\n *⌔︙اهلا بك في متجر ملفات لارفين*\n*⌔︙ملفات السورس ↓*\n*ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*\n\n"
-local TextE = "\n*ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ*\n *⌔︙علامة تعني { ✓ } ملف مفعل*\n *⌔︙علامة تعني { ✘ } ملف معطل*\n *⌔︙قناة سورس لارفين ↓*\n".." *⌔︙*[اضغط هنا لدخول](t.me/Sourcekenatamee) \n"
-local NumFile = 0
-for name,Info in pairs(res.plugins_) do
-local Check_File_is_Found = io.open("File_Bot/"..name,"r")
-if Check_File_is_Found then
-io.close(Check_File_is_Found)
-CeckFile = "(✓)"
-else
-CeckFile = "(✘)"
-end
-NumFile = NumFile + 1
-TextS = TextS..'*'..NumFile.."→* {`"..name..'`} » '..CeckFile..'\n[-Information]('..Info..')\n'
-end
-send(msg.chat_id_, msg.id_,TextS..TextE) 
-end
-else
-send(msg.chat_id_, msg.id_," *⌔︙لا يوجد اتصال من ال api* \n") 
-end
-return false
-end
-end
-
-if text and text:match("^(تعطيل) (.*)(.lua)$") and DevkenatameW(msg) then
-local name_t = {string.match(text, "^(تعطيل) (.*)(.lua)$")}
-local file = name_t[2]..'.lua'
-local file_bot = io.open("File_Bot/"..file,"r")
-if file_bot then
-io.close(file_bot)
-t = " *⌔︙الملف »* "..file.."\n*⌔︙تم تعطيل ملف* \n"
-else
-t = " *⌔︙بالتاكيد تم تعطيل ملف →* "..file.."\n"
-end
-local json_file, res = https.request("https://raw.githubusercontent.com/kenatameNTEAM/Files_kenatame/main/File_Bot/"..file)
-if res == 200 then
-os.execute("rm -fr File_Bot/"..file)
-send(msg.chat_id_, msg.id_,t) 
-dofile('kenatame.lua')  
-else
-send(msg.chat_id_, msg.id_," *⌔︙عذرا الملف لايدعم سورس لارفين* \n") 
-end
-return false
-end
-if text and text:match("^(تفعيل) (.*)(.lua)$") and DevkenatameW(msg) then
-local name_t = {string.match(text, "^(تفعيل) (.*)(.lua)$")}
-local file = name_t[2]..'.lua'
-local file_bot = io.open("File_Bot/"..file,"r")
-if file_bot then
-io.close(file_bot)
-t = " *⌔︙بالتاكيد تم تفعيل ملف →* "..file.." \n"
-else
-t = " *⌔︙الملف »* "..file.."\n*⌔︙تم تفعيل ملف* \n"
-end
-local json_file, res = https.request("https://raw.githubusercontent.com/kenatameNTEAM/Files_kenatame/main/File_Bot/"..file)
-if res == 200 then
-local chek = io.open("File_Bot/"..file,'w+')
-chek:write(json_file)
-chek:close()
-send(msg.chat_id_, msg.id_,t) 
-dofile('kenatame.lua')  
-else
-send(msg.chat_id_, msg.id_," *⌔︙عذرا الملف لايدعم سورس لارفين* \n") 
-end
-return false
-end
-if text == "مسح الملفات" and DevkenatameW(msg) then
-os.execute("rm -fr File_Bot/*")
-send(msg.chat_id_,msg.id_," *⌔︙تم مسح الملفات*")
-return false
-end
 
 if text == ("رفع مطور") and msg.reply_to_message_id_ and DevkenatameW(msg) then
 function start_function(extra, result, success)
@@ -8702,8 +8613,8 @@ end
 return false
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'لارفين').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'لارفين')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'القياده').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'القياده')
 local kenatame_Msg = {
 'عمغي 🥺💕.',
 'هاا شتريد كافي ☹️.',
@@ -9409,7 +9320,7 @@ end
 end
 
 -------------------------------
-if text == ""..(database:get(bot_id..'Name:Bot') or 'لارفين').." غادر" or text == 'غادر' then  
+if text == ""..(database:get(bot_id..'Name:Bot') or 'القياده').." غادر" or text == 'غادر' then  
 if Sudo(msg) and not database:get(bot_id..'Left:Bot'..msg.chat_id_)  then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
 send(msg.chat_id_, msg.id_,'*⌔︙تم مغادرة المجموعه*') 
@@ -9418,7 +9329,7 @@ end
 return false  
 end
 if text == 'بوت' then
-Namebot = (database:get(bot_id..'Name:Bot') or 'لارفين')
+Namebot = (database:get(bot_id..'Name:Bot') or 'القياده')
 send(msg.chat_id_, msg.id_,'*اسمي '..Namebot..'* ')
 end
 if text == 'الاحصائيات' then
@@ -10594,7 +10505,7 @@ return false
 end
 local help_text = database:get(bot_id..'help_text')
 Text = [[
-🖥┇𝚂𝙾𝚄𝚁𝙲𝙴 𝙻𝙰𝚁𝚅𝙸𝙽𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 .
+🖥┇LEADERSHIP TEAM ♚القيادة .
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
 *⚙️ | اهلا انت في اوامر البوت الرئيسية 🔏*
 *⚙️ | اختر في الاسفل الرقم التابع للأمر 🔍*
@@ -10612,10 +10523,25 @@ Text = [[
 ٴ≪┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉≫ٴ
 ➫ .🖨[┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙻𝙰𝚁𝚅𝙸𝙽𝙴. ➤](t.me/i600ik)
 ]]
-send(msg.chat_id_, msg.id_,(help_text or Text)) 
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = '❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = '•اغلاق', callback_data="/sad"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
-
 if text == "تعطيل الزخرفه" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '*⌔︙تم تعطيل الزخرفه*')
 database:set(bot_id.." amir:zhrf_Bots"..msg.chat_id_,"close")
@@ -10870,6 +10796,689 @@ if data.channel_.status_.ID == "ChatMemberStatusKicked" then
 database:srem(bot_id..'Chek:Groups','-100'..data.channel_.id_)  
 end
 end
+if data.ID == "UpdateNewCallbackQuery" then
+local Chat_id = data.chat_id_
+local Msg_id = data.message_id_
+local msg_idd = Msg_id/2097152/0.5
+local Text = data.payload_.data_
+if Text == '/help1' then
+if not Mod(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+⌔︙اوامر الحمايه اتبع مايلي ...
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙قفل + فتح ← الامر…
+⌔︙← { بالتقيد ، بالطرد ، بالكتم }
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙الروابط
+⌔︙المعرف
+⌔︙التاك
+⌔︙الشارحه
+⌔︙التعديل
+⌔︙التثبيت
+⌔︙المتحركه
+⌔︙الملفات
+⌔︙الصور
+⌔︙التفليش
+⌔︙الاباحي
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙الماركداون
+⌔︙البوتات
+⌔︙التكرار
+⌔︙الكلايش
+⌔︙السيلفي
+⌔︙الملصقات
+⌔︙الفيديو
+⌔︙الانلاين
+⌔︙الدردشه
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙التوجيه
+⌔︙الاغاني
+⌔︙الصوت
+⌔︙الجهات
+⌔︙الاشعارات
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help2' then
+if not Mod(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+⌔︙اهلا بك عزيزي …
+⌔︙اوامر تفعيل وتعطيل …
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙تفعيل ~ تعطيل + امر …
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙اطردني
+⌔︙صيح
+⌔︙ضافني
+⌔︙الرابط 
+⌔︙الحظر
+⌔︙الرفع
+⌔︙الحظر
+⌔︙الرفع 
+⌔︙الايدي
+⌔︙الالعاب
+⌔︙ردود المطور
+⌔︙الترحيب
+⌔︙ردود المدير
+⌔︙الردود
+⌔︙ردود البوت
+⌔︙اوامر التحشيش
+⌔︙صورتي
+⌔︙زخرفه
+⌔︙حساب العمر
+⌔︙الابراج
+⌔︙غنيلي
+⌔︙تنبيه الاسماء
+⌔︙تنبيه المعرف
+⌔︙تنبيه الصور
+⌔︙التوحيد
+⌔︙الكتم الاسم
+⌔︙نسبه الرجوله 
+⌔︙نسبه الانوثه
+⌔︙نسبه الكره
+⌔︙نسبه الحب
+⌔︙ءall
+ ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help3' then
+if not Mod(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+⌔︙اهلا بك عزيزي …
+⌔︙اوامر الوضع ~ اضف …
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙اضف / حذف ← رد
+⌔︙اضف / حذف ← صلاحيه
+ ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙ضع + امر …
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙اسم
+⌔︙رابط
+⌔︙ترحيب
+⌔︙قوانين
+⌔︙صوره
+⌔︙وصف
+⌔︙تكرار + عدد
+ ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help4' then
+if not Mod(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+⌔︙اهلا بك عزيزي …
+⌔︙اوامر مسح / الحذف ← امر
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙مسح + امر …
+ ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙الايدي
+⌔︙الادمنيه
+⌔︙المميزين
+⌔︙ردود المدير
+⌔︙المدراء 
+⌔︙المنشئين 
+⌔︙الاساسين
+⌔︙الاسماء المكتومه
+⌔︙البوتات
+⌔︙امسح
+⌔︙صلاحيه
+⌔︙قائمه منع المتحركات
+⌔︙قائمه منع الصور
+⌔︙قائمه منع الملصقات
+⌔︙مسح قائمه المنع 
+⌔︙المحذوفين
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙حذف + امر ...
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙امر 
+⌔︙الاوامر المضافه
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help5' then
+if not Mod(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+⌔︙اهلا بك عزيزي …
+⌔︙اوامر تنزيل ورفع …
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙مميز
+⌔︙ادمن
+⌔︙مدير
+⌔︙منشئ
+⌔︙منشئ اساسي
+⌔︙مالك
+⌔︙الادمنيه
+⌔︙ادمن بالكروب
+⌔︙ادمن بكل الصلاحيات
+⌔︙القيود
+⌔︙تنزيل جميع الرتب
+⌔︙تنزيل الكل 
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙اوامر التغير …
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙تغير رد المطور + اسم
+⌔︙تغير رد المالك + اسم
+⌔︙تغير رد منشئ الاساسي + اسم
+⌔︙تغير رد المنشئ + اسم
+⌔︙تغير رد المدير + اسم
+⌔︙تغير رد الادمن + اسم
+⌔︙تغير رد المميز + اسم
+⌔︙تغير رد العضو + اسم
+⌔︙تغير امر الاوامر
+⌔︙تغير امر م1 ~ الئ م10
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help6' then
+if not Mod(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+⌔︙اهلا بك عزيزي …
+⌔︙اوامر المجموعه …
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙الاوامر … كالتالي
+ ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙استعاده الاوامر
+⌔︙تحويل كالاتي~⪼ صور : ملصق : صوت : بصمه
+⌔︙صيح ~ تاك ~ المميزين : الادمنيه : المدراء : المنشئين : المنشئين الاساسين : للمالك
+⌔︙كشف القيود 
+⌔︙تعين الايدي
+⌔︙تغير الايدي
+⌔︙الحساب + ايدي الحساب
+⌔︙تنظيف + العدد
+⌔︙تنزيل الكل
+⌔︙تنزيل جميع الرتب
+⌔︙منع + برد
+✹⤂~ الصور + متحركه + ملصق ~
+⌔︙حظر ~ كتم ~ تقيد ~ طرد
+⌔︙المحظورين ~ المكتومين ~ المقيدين
+⌔︙الغاء كتم + حظر + تقيد ~ بالرد و معرف و ايدي
+⌔︙تقيد ~ كتم + الرقم + ساعه
+⌔︙تقيد ~ كتم + الرقم + يوم
+⌔︙تقيد ~ كتم + الرقم + دقيقه
+⌔︙تثبيت ~ الغاء تثبيت
+⌔︙الترحيب
+⌔︙الغاء تثبيت الكل 
+⌔︙كشف البوتات
+⌔︙الصلاحيات
+⌔︙تنظيف التعديل ⇠ تنظيف الميديا
+⌔︙كشف ~ برد ← بمعرف ← ايدي
+⌔︙تاك للكل
+⌔︙وضع لقب + لقب
+⌔︙تاك للمشرفين
+⌔︙اعدادات المجموعه
+⌔︙عدد الكروب
+⌔︙ردود المدير
+⌔︙اسم بوت + الرتبه
+⌔︙الاوامر المضافه
+⌔︙وضع توحيد + توحيد
+⌔︙تعين عدد الكتم + رقم
+⌔︙التوحيد
+⌔︙كتم اسم + اسم
+⌔︙قائمه المنع
+⌔︙نسبه الحب 
+⌔︙نسبه رجوله
+⌔︙نسبه الكره
+⌔︙نسبه الانوثه
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help7' then
+if not Mod(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+⌔︙الاوامر التحشيش …
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← الامࢪ
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← مطي 
+⌔︙تاك للمطايه
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← صخل
+⌔︙تاك لصخوله
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← جلب
+⌔︙تاك لجلاب
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← قرد 
+⌔︙تاك لقروده
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← بقره
+⌔︙تاك لبقرات
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← حصان
+⌔︙تاك لحصونه
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← طلي
+⌔︙تاك لطليان
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← زاحف 
+⌔︙تاك لزواحف
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← جريذي
+⌔︙تاك لجريذيه
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← الحات
+⌔︙تاك للحات
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙رفع + تنزيل ← الحاته
+⌔︙تاك للحاتات
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help8' then
+if not Sudo(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+⌔︙اهلا بك عزيزي √
+⌔︙اوامر الاعضاء كتالي…↓
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙عرض معلوماتك ↑↓
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙ايديي ← اسمي 
+⌔︙رسايلي ← مسح رسايلي 
+⌔︙رتبتي ← سحكاتي 
+⌔︙مسح سحكاتي ← المنشئ 
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙اوآمر المجموعه ↑↓
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙الرابط ← القوانين – الترحيب
+⌔︙ايدي ← اطردني 
+⌔︙اسمي ← المطور  
+⌔︙كشف ~ بالرد بالمعرف
+  ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙اسم البوت + الامر ↑↓
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙بوسه بالرد 
+⌔︙مصه بالرد
+⌔︙رزله بالرد 
+⌔︙شنو رئيك بهذا بالرد
+⌔︙شنو رئيك بهاي بالرد
+⌔︙تحب هذا
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+➫ .🖨┇𝚂𝙾𝚄𝚁𝙲𝙴𝚂 𝙻𝙰𝚁𝚅𝙸𝙽𝙴. ➤
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help9' then
+if not Sudo(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+✹⤂اوامر المطورين 
+ ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙تفعيل ← تعطيل 
+⌔︙المجموعات ← المشتركين ← الاحصائيات
+⌔︙رفع ← تنزيل منشئ اساسي
+⌔︙مسح الاساسين ← المنشئين الاساسين
+⌔︙مسح المنشئين ← المنشئين
+⌔︙رفع ⇠ تنزيل مالك
+⌔︙مسح قائمه المالك 
+⌔︙اسم ~⪼ غادر + غادر
+⌔︙اذاعه 
+⌔︙ردود المطور 
+ ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help10' then
+local help_text = database:get(bot_id..'help10_text')
+local Teext =[[
+⌔︙اهلا بك عزيزي √
+⌔︙اوامر مطور الاساسي...↓
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙تفعيل
+⌔︙تعطيل
+⌔︙مسح الاساسين
+⌔︙المنشئين الاساسين
+⌔︙رفع ⇠ تنزيل منشئ اساسي
+⌔︙مسح المطورين
+⌔︙رفع ⇠ تنزيل مالك 
+⌔︙المطورين
+⌔︙رفع ⇠ تنزيل مطور
+⌔︙رفع ~⪼ تنزيل مطور ثانوي
+⌔︙الثانويين ~⪼ مسح الثانويين
+⌔︙تفعيل ~⪼ تعطيل الاضافات
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙اسم البوت + غادر
+⌔︙غادر
+⌔︙اسم بوت + الرتبه
+⌔︙تحديث السورس
+⌔︙حضر عام
+⌔︙كتم عام
+⌔︙الغاء العام
+⌔︙قائمه العام
+⌔︙مسح قائمه العام
+⌔︙جلب نسخه الاحتياطيه
+⌔︙رفع نسخه الاحتياطيه
+ ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙المتجر
+⌔︙متجر الملفات
+⌔︙الملفات
+⌔︙مسح الملفات
+⌔︙تعطيل + تفعيل + اسم ملف
+ ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙اذاعه خاص
+⌔︙اذاعه
+⌔︙اذاعه بالتوجيه
+⌔︙اذاعه بالتوجيه خاص
+⌔︙اذاعه بالتثبيت
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙جلب نسخه الاحتياطيه
+⌔︙رفع نسخه احتياطيه
+⌔︙ضع عدد الاعضاء + العدد
+⌔︙ضع كليشه المطور
+⌔︙تفعيل/تعطيل الاذاعه
+⌔︙تفعيل/تعطيل البوت الخدمي
+⌔︙تفعيل/تعطيل التواصل
+⌔︙تغير اسم البوت
+⌔︙تفعيل نسخه التلقائيه
+⌔︙اضف/حذف رد للكل
+⌔︙ردود المطور
+⌔︙مسح ردود المطور
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙الاشتراك الاجباري
+⌔︙تعطيل الاشتراك الاجباري
+⌔︙تفعيل الاشتراك الاجباري
+⌔︙حذف رساله الاشتراك
+⌔︙تغير رساله الاشتراك
+⌔︙تغير الاشتراك
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+⌔︙الاحصائيات
+⌔︙المشتركين
+⌔︙المجموعات 
+⌔︙تفعيل/تعطيل المغادره
+⌔︙تنظيف المشتركين
+⌔︙تنظيف الكروبات
+ٴ┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉ٴ
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = 'رجوع 🧸', callback_data="/help"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help' then
+if not Mod(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+🖥┇LEADERSHIP TEAM ♚القيادة .
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
+⚙️ | اهلا انت في اوامر البوت الرئيسية 🔏
+⚙️ | اختر في الاسفل الرقم التابع للأمر 🔍
+ٴ≪┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉≫ٴ
+⌔︙م1 1⃣◂ اوامر الحمايه
+⌔︙م2 2⃣◂ اوامر تعطيل ~ تفعيل
+⌔︙م3 3⃣◂ اوامر ضع ~ اضف
+⌔︙م4 4⃣◂ اوامر مسح ~ حذف
+⌔︙م5 5⃣◂ اوامر تنزيل+رفع+التغير
+⌔︙م6 6⃣◂ اوامر الكروب
+⌔︙م7 7⃣◂ اوامر التحشيش
+⌔︙م8 8⃣◂ اوامر مطور البوت
+⌔︙م9 9⃣◂ اوامر مطور الاساسي 
+⌔︙م10 🔟◂ اوامر الاعضاء
+ٴ≪┉ ┉ ┉ ┉ ┉ 𝑳𝐍 ┉  ┉ ┉ ┉ ┉≫ٴ
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '⁦❶', callback_data="/help1"},{text = ' ❷', callback_data="/help2"},{text = '⁦❸', callback_data="/help3"},
+},
+{
+{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},{text = ' ❻', callback_data="/help6"},
+},
+{
+{text = '❼', callback_data="/help7"},{text = '⁦❽', callback_data="/help8"},
+},
+{
+{text = '•اغلاق', callback_data="/sad"},
+},
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/sad' then
+if not Mod(data) then
+local notText = 'الامر لا يخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+تم اغلاق الصفحه 
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = ' القياده', url="t.me/KKK25"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+end
 if data.ID == "UpdateNewMessage" then  -- new msg
 msg = data.message_
 text = msg.content_.text_
@@ -10906,7 +11515,7 @@ if (text and text == "تفعيل اوامر التحشيش") then
 send(msg.chat_id_, msg.id_, '  *⌔︙تم تفعيل اوامر التحشيش*')
 database:del(bot_id.."Fun_Bots:"..msg.chat_id_)
 end
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'لارفين')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'القياده')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
