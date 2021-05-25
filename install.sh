@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-cd $HOME/LEADERSHIP
+cd $HOME/kenatame
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x LEADERSHIP
+chmod +x kenatame
 chmod +x Run
 ./Run
 }
