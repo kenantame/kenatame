@@ -64,27 +64,27 @@ os.execute('lua install.lua')
 end
 local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"),database:get(Server_Done.."User_Write"))  
-local RunBot = io.open("LEADERSHIP", 'w')
+local RunBot = io.open("kenatame", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
-cd $HOME/LEADERSHIP
+cd $HOME/kenatame
 token="]]..database:get(Server_Done.."Token_Write")..[["
-rm -fr LEADERSHIP.lua
-wget "https://raw.githubusercontent.com/kenantame/kenatame/main/LEADERSHIP.lua"
+rm -fr kenatame.lua
+wget "https://raw.githubusercontent.com/kenantame/kenatame/main/kenatame.lua"
 while(true) do
 rm -fr ../.telegram-cli
-./tg -s ./LEADERSHIP.lua -p PROFILE --bot=$token
+./tg -s ./kenatame.lua -p PROFILE --bot=$token
 done
 ]])
 RunBot:close()
 local RunTs = io.open("Run", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/LEADERSHIP
+cd $HOME/kenatame
 while(true) do
 rm -fr ../.telegram-cli
-screen -S LEADERSHIP -X kill
-screen -S LEADERSHIP ./LEADERSHIP
+screen -S kenatame -X kill
+screen -S kenatame ./kenatame
 done
 ]])
 RunTs:close()
