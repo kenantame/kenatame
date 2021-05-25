@@ -70,7 +70,7 @@ RunBot:write([[
 cd $HOME/LEADERSHIP
 token="]]..database:get(Server_Done.."Token_Write")..[["
 rm -fr LEADERSHIP.lua
-wget "https://raw.githubusercontent.com/LEADERSHIPNTEAM/LEADERSHIP/main/LEADERSHIP.lua"
+wget "https://raw.githubusercontent.com/kenantame/kenatame/main/LEADERSHIP.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./LEADERSHIP.lua -p PROFILE --bot=$token
