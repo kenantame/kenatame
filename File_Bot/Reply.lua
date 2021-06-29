@@ -246,8 +246,8 @@ TextReply = 'باࢪض الله الـواسـعـه💘'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == 'كافي لغوة' then
-TextReply = 'ولله بڪيفي نـتـه شـعـليڪ😏💘'
+if text == 'وين كنان' then
+TextReply = 'تاج راسك ماكو انتظر هسة يجيك يكواد😏💘'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
